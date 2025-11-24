@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phil & Sons on Main - Italian Restaurant & Pizzeria</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #fff;
+            padding: 20px 0;
+            border-bottom: 2px solid #d4a574;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #8B0000;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 30px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #8B0000;
+        }
+
+        .hero {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(rgba(139, 0, 0, 0.4), rgba(139, 0, 0, 0.4)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23e8e8e8" width="1200" height="400"/><text x="50%" y="50%" text-anchor="middle" dy=".3em" font-family="sans-serif" font-size="24" fill="%23999">Hero Image Placeholder</text></svg>');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #8B0000;
+            text-align: center;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+
+        .contact-info h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #8B0000;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .contact-info a {
+            color: #8B0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .hours-card {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .hours-card h4 {
+            color: #8B0000;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .hours-card p {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #8B0000;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            font-size: 16px;
+        }
+
+        .cta-button:hover {
+            background: #6b0000;
+        }
+
+        #map {
+            width: 100%;
+            height: 450px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        section:nth-child(even) {
+            background: #fafafa;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo">Phil & Sons</div>
+            <div style="display: flex; gap: 30px;">
+                <a href="#about">About</a>
+                <a href="#hours">Hours</a>
+                <a href="#location">Location</a>
+                <a href="#order" class="cta-button">Order Online</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Phil & Sons on Main</h1>
+            <p>Classic Italian Pizza & Specialties Since 1985</p>
+        </div>
+    </div>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>Welcome to Phil & Sons on Main, your neighborhood destination for authentic Italian food and incredible pizza.</p>
+                    <p>We specialize in oversized thin-crust slices, traditional Sicilian-style pies, and hearty Italian specialties that have been perfected over decades. Every dish is made with care and the finest ingredients.</p>
+                    <p>Whether you're grabbing a slice on your lunch break or sitting down for a full meal, you'll experience the warmth and quality that define Phil & Sons.</p>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <p><strong>Address</strong><br>57-29 Main St<br>Flushing, NY 11355</p>
+                    <p><strong>Phone</strong><br><a href="tel:7189610263">(718) 961-0263</a></p>
+                    <p style="margin-top: 20px;">
+                        <a href="https://philandsonpizza.avcoindustries.com/order-now" class="cta-button">Order Online</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hours">
+        <div class="container">
+            <h2 class="section-title">Hours of Operation</h2>
+            <div class="hours-grid">
+                <div class="hours-card">
+                    <h4>Monday - Saturday</h4>
+                    <p>11:00 AM - 9:00 PM</p>
+                </div>
+                <div class="hours-card">
+                    <h4>Sunday</h4>
+                    <p>11:00 AM - 9:00 PM</p>
+                </div>
+                <div class="hours-card">
+                    <h4>Thursday</h4>
+                    <p>11:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location">
+        <div class="container">
+            <h2 class="section-title">Visit Us</h2>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 16px; color: #555;">
+                57-29 Main St, Flushing, NY 11355
+            </p>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.892746883365!2d-73.82929242346895!3d40.76509097128856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c26589b5f5c5c1%3A0x1234567890abcdef!2s57-29%20Main%20St%2C%20Flushing%2C%20NY%2011355!5e0!3m2!1sen!2sus!4v1234567890123" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Phil & Sons on Main. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 12px;">57-29 Main St, Flushing, NY 11355 | (718) 961-0263</p>
+        </div>
+    </footer>
+</body>
+</html>
